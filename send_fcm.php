@@ -278,6 +278,46 @@ try {
         // sendErrorResponse(401, 'Access token is required');
     }
 
+    // Normalize input data to FCM format
+    // Support flat structure: {action, topic, title, body, type, area_id, data}
+    // Convert to structured format: {topic, notification: {title, body}, data}
+    $normalizedData = [];
+
+    // Handle topic/token/tokens
+    if (isset($data['topic'])) {
+        $normalizedData['topic'] = $data['topic'];
+    }
+    if (isset($data['token'])) {
+        $normalizedData['token'] = $data['token'];
+    }
+    if (isset($data['tokens'])) {
+        $normalizedData['tokens'] = $data['tokens'];
+    }
+
+    // Handle notification - check if already structured or needs conversion
+    if (isset($data['notification']) && is_array($data['notification'])) {
+        // Already in notification format
+        $normalizedData['notification'] = $data['notification'];
+    } elseif (isset($data['title']) && isset($data['body'])) {
+        // Flat format - create notification object
+        $normalizedData['notification'] = [
+            'title' => $data['title'],
+            'body' => $data['body']
+        ];
+    }
+
+    // Handle data payload - ensure all values are strings
+    if (isset($data['data']) && is_array($data['data'])) {
+        $normalizedData['data'] = [];
+        foreach ($data['data'] as $key => $value) {
+            if (is_array($value) || is_object($value)) {
+                $normalizedData['data'][$key] = json_encode($value);
+            } else {
+                $normalizedData['data'][$key] = (string)$value; // Cast to string
+            }
+        }
+    }
+
     // Initialize FCM service
     $projectId = 'insight-guard-c8c1b';
     $serviceAccountPath = __DIR__ . '/ig.json';
@@ -285,7 +325,7 @@ try {
     $fcm = new FCMService($projectId, $serviceAccountPath);
 
     // Send message
-    $responses = $fcm->sendMessage($data);
+    $responses = $fcm->sendMessage($normalizedData);
 
     // Prepare response
     $response = [
