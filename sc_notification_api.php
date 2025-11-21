@@ -282,12 +282,14 @@ try {
                 }
             }
 
-            // Prepare FCM data - send_fcm.php will normalize the flat structure
+            // Prepare FCM data with proper structure (same as notification_api.php)
             $fcmData = [
-                'topic' => $input['topic'],
-                'title' => $input['title'],
-                'body' => $input['body'],
-                'data' => $fcmDataPayload  // All values now converted to strings (excluding title/body)
+                'topic'        => $input['topic'],
+                'notification' => [
+                    'title' => $input['title'],
+                    'body'  => $input['body']
+                ],
+                'data'         => $fcmDataPayload  // All values now converted to strings (excluding title/body)
             ];
 
             // Send FCM notification
