@@ -310,6 +310,11 @@ try {
     if (isset($data['data']) && is_array($data['data'])) {
         $normalizedData['data'] = [];
         foreach ($data['data'] as $key => $value) {
+            // Skip title and body if notification payload exists to avoid duplicate notifications
+            if (isset($normalizedData['notification']) && ($key === 'title' || $key === 'body')) {
+                continue;
+            }
+
             if (is_array($value) || is_object($value)) {
                 $normalizedData['data'][$key] = json_encode($value);
             } else {
