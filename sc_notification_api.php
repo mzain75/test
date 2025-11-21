@@ -265,9 +265,15 @@ try {
             }
 
             // Convert all data values to strings as required by FCM
+            // Skip title and body from data payload to avoid duplicate notifications
             $fcmDataPayload = [];
             if (!empty($input['data'])) {
                 foreach ($input['data'] as $key => $value) {
+                    // Skip title and body to avoid duplicate notifications
+                    if ($key === 'title' || $key === 'body') {
+                        continue;
+                    }
+
                     if (is_array($value) || is_object($value)) {
                         $fcmDataPayload[$key] = json_encode($value);
                     } else {
@@ -281,7 +287,7 @@ try {
                 'topic' => $input['topic'],
                 'title' => $input['title'],
                 'body' => $input['body'],
-                'data' => $fcmDataPayload  // All values now converted to strings
+                'data' => $fcmDataPayload  // All values now converted to strings (excluding title/body)
             ];
 
             // Send FCM notification
