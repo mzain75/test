@@ -76,8 +76,11 @@ section[id] { scroll-margin-top: 90px; }
 @keyframes floatBlobC { 0%,100% { transform: translate(0,0); } 33% { transform: translate(40px,-40px); } 66% { transform: translate(-40px,30px); } }
 
 /* ---------------- Version chip ---------------- */
-.version-chip {
+.version-stack {
   position: fixed; top: 78px; right: 14px; z-index: 900;
+  display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+}
+.version-chip {
   display: flex; align-items: center; gap: 8px;
   background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
   border: 1px solid var(--line); border-radius: 100px;

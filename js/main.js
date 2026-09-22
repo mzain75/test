@@ -23,9 +23,15 @@
   function initPreloader() {
     var pre = document.getElementById('preloader');
     if (!pre) return;
-    window.addEventListener('load', function () {
+    var hidden = false;
+    function reveal() {
+      if (hidden) return;
+      hidden = true;
       setTimeout(function () { pre.classList.add('hide'); }, 350);
-    });
+    }
+    window.addEventListener('load', reveal);
+    // Safety net: never let a slow/blocked resource strand users behind the preloader.
+    setTimeout(reveal, 2600);
   }
 
   /* ---------------- Navbar shrink on scroll ---------------- */

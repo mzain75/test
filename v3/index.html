@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Clipper S1 — Prestige Suite</title>
+<meta name="description" content="Clipper S1 Hair Saloon — Prestige Suite. A widget-rich, cinematic take on luxury grooming." />
+<meta name="theme-color" content="#0a0908" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="p-preloader" id="preloader">
+  <div class="p-preload-mark">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <circle cx="30" cy="30" r="26" stroke="url(#pg1)" stroke-width="1.5" />
+      <path d="M18 18 L42 42 M42 18 L30 30 M18 42 L25 35" stroke="#d9b96a" stroke-width="2" stroke-linecap="round" />
+      <defs><linearGradient id="pg1" x1="0" y1="0" x2="60" y2="60"><stop offset="0%" stop-color="#d9b96a"/><stop offset="100%" stop-color="#f5e2b8"/></linearGradient></defs>
+    </svg>
+  </div>
+  <div class="p-preload-pct" id="preloadPct">0%</div>
+</div>
+
+<!-- Cursor spotlight (desktop) -->
+<div class="p-spotlight" id="spotlight"></div>
+
+<!-- Version switcher -->
+<div class="p-version-stack">
+  <a href="../index.html" class="p-version-chip">Classic</a>
+  <a href="../v2/index.html" class="p-version-chip">Studio</a>
+</div>
+
+<!-- Nav -->
+<header class="p-nav" id="pNav">
+  <div class="p-nav-inner">
+    <a href="#top" class="p-logo">
+      <svg width="30" height="30" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="26" stroke="#d9b96a" stroke-width="1.5"/><path d="M18 18 L42 42 M42 18 L30 30 M18 42 L25 35" stroke="#d9b96a" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Clipper S1 <em>Prestige</em></span>
+    </a>
+
+    <nav class="p-nav-links" id="pNavLinks">
+      <div class="p-pill" id="pPill" aria-hidden="true"></div>
+      <a href="#top" class="p-nav-link active" data-pnav>Home</a>
+      <a href="#services" class="p-nav-link" data-pnav>Services</a>
+      <a href="#membership" class="p-nav-link" data-pnav>Membership</a>
+      <a href="#gallery" class="p-nav-link" data-pnav>Gallery</a>
+      <a href="#reviews" class="p-nav-link" data-pnav>Reviews</a>
+      <a href="#faq" class="p-nav-link" data-pnav>FAQ</a>
+      <a href="#book" class="p-nav-link" data-pnav>Book</a>
+    </nav>
+
+    <div class="p-nav-actions">
+      <button class="p-theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+        <span class="p-toggle-knob"></span>
+      </button>
+      <a href="#book" class="p-btn p-btn-gold p-hide-sm">Reserve</a>
+      <button class="p-hamburger" id="pHamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="p-mobile-overlay" id="pMobileOverlay"></div>
+<div class="p-mobile-menu" id="pMobileMenu">
+  <a href="#top" data-pnav-mobile>Home</a>
+  <a href="#services" data-pnav-mobile>Services</a>
+  <a href="#membership" data-pnav-mobile>Membership</a>
+  <a href="#gallery" data-pnav-mobile>Gallery</a>
+  <a href="#reviews" data-pnav-mobile>Reviews</a>
+  <a href="#faq" data-pnav-mobile>FAQ</a>
+  <a href="#book" class="p-btn p-btn-gold" data-pnav-mobile>Reserve a Chair</a>
+</div>
+
+<!-- Hero -->
+<section class="p-hero" id="top">
+  <div class="p-hero-layer p-layer-bg">
+    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80" alt="Master barber at work" />
+  </div>
+  <div class="p-hero-layer p-layer-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="p-hero-veil"></div>
+
+  <div class="p-hero-content">
+    <div class="p-status-badge" id="statusBadge">
+      <span class="p-status-dot"></span>
+      <span id="statusText">Checking hours…</span>
+    </div>
+
+    <h1 class="p-hero-title">
+      <span class="p-serif">The Art of the</span>
+      <span class="p-serif accent-gold">Perfect Cut</span>
+    </h1>
+    <p class="p-hero-sub">An exclusive grooming suite for men who notice details — precision barbering, bespoke consultations, and a members' lounge worth lingering in.</p>
+
+    <div class="p-hero-actions">
+      <a href="#book" class="p-btn p-btn-gold p-btn-lg"><i class="fa-solid fa-calendar-check"></i> Reserve Your Chair</a>
+      <a href="#before-after" class="p-btn p-btn-ghost p-btn-lg"><i class="fa-solid fa-arrows-left-right"></i> See the Transformation</a>
+    </div>
+
+    <div class="p-trust-row">
+      <div class="p-trust-stars">★★★★★</div>
+      <span><strong>4.97</strong> average from <strong>1,240+</strong> reviews</span>
+    </div>
+  </div>
+
+  <a href="#press" class="p-scroll-down" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- Press marquee -->
+<div class="p-press" id="press">
+  <p>As featured in</p>
+  <div class="p-press-track">
+    <span>GQ STYLE</span><span>MEN'S JOURNAL</span><span>URBAN GROOM</span><span>THE BARBER TIMES</span><span>NYC LIVING</span><span>GQ STYLE</span><span>MEN'S JOURNAL</span><span>URBAN GROOM</span><span>THE BARBER TIMES</span><span>NYC LIVING</span>
+  </div>
+</div>
+
+<!-- Before / After -->
+<section class="p-ba" id="before-after">
+  <div class="p-section-head">
+    <p class="p-eyebrow"><span></span>See the difference</p>
+    <h2>Before <span class="accent-gold">&amp;</span> After</h2>
+    <p class="p-sub">Drag the handle — every transformation tells its own story.</p>
+  </div>
+
+  <div class="p-ba-frame" id="baFrame">
+    <img class="p-ba-before" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1000&q=80" alt="Before haircut" />
+    <div class="p-ba-after-wrap" id="baAfterWrap">
+      <img class="p-ba-after" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1000&q=80" alt="After haircut" />
+    </div>
+    <div class="p-ba-line" id="baLine"></div>
+    <input type="range" min="0" max="100" value="50" class="p-ba-range" id="baRange" aria-label="Drag to compare before and after" />
+    <span class="p-ba-tag p-ba-tag-l">Before</span>
+    <span class="p-ba-tag p-ba-tag-r">After</span>
+  </div>
+</section>
+
+<!-- Services + calculator -->
+<section class="p-services" id="services">
+  <div class="p-section-head">
+    <p class="p-eyebrow"><span></span>Build your visit</p>
+    <h2>Services &amp; <span class="accent-gold">Live Estimate</span></h2>
+    <p class="p-sub">Select what you'd like — your total updates instantly.</p>
+  </div>
+
+  <div class="p-calc">
+    <div class="p-calc-list">
+      <label class="p-calc-item">
+        <input type="checkbox" data-price="35" data-name="Signature Haircut" checked />
+        <span class="p-calc-check"></span>
+        <span class="p-calc-name">Signature Haircut</span>
+        <span class="p-calc-price">$35</span>
+      </label>
+      <label class="p-calc-item">
+        <input type="checkbox" data-price="20" data-name="Beard Sculpt" />
+        <span class="p-calc-check"></span>
+        <span class="p-calc-name">Beard Sculpt</span>
+        <span class="p-calc-price">$20</span>
+      </label>
+      <label class="p-calc-item">
+        <input type="checkbox" data-price="28" data-name="Hot Towel Shave" />
+        <span class="p-calc-check"></span>
+        <span class="p-calc-name">Hot Towel Shave</span>
+        <span class="p-calc-price">$28</span>
+      </label>
+      <label class="p-calc-item">
+        <input type="checkbox" data-price="45" data-name="Scalp Therapy" />
+        <span class="p-calc-check"></span>
+        <span class="p-calc-name">Scalp Therapy</span>
+        <span class="p-calc-price">$45</span>
+      </label>
+      <label class="p-calc-item">
+        <input type="checkbox" data-price="55" data-name="Color Studio" />
+        <span class="p-calc-check"></span>
+        <span class="p-calc-name">Color Studio</span>
+        <span class="p-calc-price">$55</span>
+      </label>
+      <label class="p-calc-item">
+        <input type="checkbox" data-price="15" data-name="Kids Cut" />
+        <span class="p-calc-check"></span>
+        <span class="p-calc-name">Kids Cut</span>
+        <span class="p-calc-price">$15</span>
+      </label>
+    </div>
+
+    <div class="p-calc-summary">
+      <span class="p-calc-label">Your estimate</span>
+      <div class="p-calc-total"><span>$</span><span id="calcTotal">35</span></div>
+      <span class="p-calc-count"><span id="calcCount">1</span> service selected</span>
+      <a href="#book" class="p-btn p-btn-gold p-btn-block" id="calcBookBtn">Book This Combo</a>
+    </div>
+  </div>
+</section>
+
+<!-- Membership carousel -->
+<section class="p-membership" id="membership">
+  <div class="p-section-head light">
+    <p class="p-eyebrow"><span></span>Belong to the suite</p>
+    <h2>Membership <span class="accent-gold">Tiers</span></h2>
+  </div>
+
+  <div class="p-mem-carousel">
+    <button class="p-mem-arrow p-mem-prev" id="memPrev" aria-label="Previous tier"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="p-mem-track" id="memTrack">
+      <div class="p-mem-card">
+        <span class="p-mem-badge">Essential</span>
+        <div class="p-mem-price">$79<small>/mo</small></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 1 signature cut / month</li>
+          <li><i class="fa-solid fa-check"></i> 10% product discount</li>
+          <li><i class="fa-solid fa-check"></i> Priority scheduling</li>
+        </ul>
+        <a href="#book" class="p-btn p-btn-ghost p-btn-block">Choose Essential</a>
+      </div>
+      <div class="p-mem-card p-mem-featured">
+        <span class="p-mem-badge gold">Prestige</span>
+        <div class="p-mem-price">$149<small>/mo</small></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 2 visits / month, any service</li>
+          <li><i class="fa-solid fa-check"></i> Complimentary hot towel shave</li>
+          <li><i class="fa-solid fa-check"></i> Members' lounge access</li>
+          <li><i class="fa-solid fa-check"></i> 20% product discount</li>
+        </ul>
+        <a href="#book" class="p-btn p-btn-gold p-btn-block">Choose Prestige</a>
+      </div>
+      <div class="p-mem-card">
+        <span class="p-mem-badge">Elite</span>
+        <div class="p-mem-price">$249<small>/mo</small></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Unlimited visits</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated master barber</li>
+          <li><i class="fa-solid fa-check"></i> Monthly scalp therapy</li>
+          <li><i class="fa-solid fa-check"></i> 2 guest passes / month</li>
+        </ul>
+        <a href="#book" class="p-btn p-btn-ghost p-btn-block">Choose Elite</a>
+      </div>
+    </div>
+    <button class="p-mem-arrow p-mem-next" id="memNext" aria-label="Next tier"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+  <div class="p-mem-dots" id="memDots"></div>
+</section>
+
+<!-- Availability -->
+<section class="p-avail" id="avail">
+  <div class="p-section-head">
+    <p class="p-eyebrow"><span></span>Live availability</p>
+    <h2>Today's Open <span class="accent-gold">Slots</span></h2>
+    <p class="p-sub">Tap a time to carry it straight into your booking.</p>
+  </div>
+
+  <div class="p-slots" id="slots">
+    <button class="p-slot" data-time="10:00">10:00 AM</button>
+    <button class="p-slot" data-time="11:30">11:30 AM</button>
+    <button class="p-slot p-slot-taken" disabled data-time="12:30">12:30 PM</button>
+    <button class="p-slot" data-time="14:00">2:00 PM</button>
+    <button class="p-slot" data-time="15:30">3:30 PM</button>
+    <button class="p-slot p-slot-taken" disabled data-time="16:30">4:30 PM</button>
+    <button class="p-slot" data-time="17:30">5:30 PM</button>
+    <button class="p-slot" data-time="19:00">7:00 PM</button>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="p-gallery" id="gallery">
+  <div class="p-section-head">
+    <p class="p-eyebrow"><span></span>The lookbook</p>
+    <h2>Fresh Off The <span class="accent-gold">Chair</span></h2>
+  </div>
+
+  <div class="p-follow">
+    <i class="fa-brands fa-instagram"></i>
+    <span>@clippers1studio</span>
+    <strong><span class="p-count" data-count="12400">0</span>+ followers</strong>
+  </div>
+
+  <div class="p-grid">
+    <figure class="p-grid-item" data-full="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=500&q=80" alt="Styling session" loading="lazy" /><span class="p-grid-like"><i class="fa-solid fa-heart"></i> 482</span></figure>
+    <figure class="p-grid-item" data-full="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=500&q=80" alt="Sharp fade" loading="lazy" /><span class="p-grid-like"><i class="fa-solid fa-heart"></i> 610</span></figure>
+    <figure class="p-grid-item" data-full="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=500&q=80" alt="Studio interior" loading="lazy" /><span class="p-grid-like"><i class="fa-solid fa-heart"></i> 355</span></figure>
+    <figure class="p-grid-item" data-full="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=500&q=80" alt="Hot towel shave" loading="lazy" /><span class="p-grid-like"><i class="fa-solid fa-heart"></i> 729</span></figure>
+    <figure class="p-grid-item" data-full="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" alt="Barber tools" loading="lazy" /><span class="p-grid-like"><i class="fa-solid fa-heart"></i> 291</span></figure>
+    <figure class="p-grid-item" data-full="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=500&q=80" alt="Grooming products" loading="lazy" /><span class="p-grid-like"><i class="fa-solid fa-heart"></i> 402</span></figure>
+  </div>
+</section>
+
+<div class="p-lightbox" id="pLightbox">
+  <button class="p-lightbox-close" id="pLightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <img src="" alt="" id="pLightboxImg" />
+</div>
+
+<!-- Awards strip -->
+<div class="p-awards">
+  <div class="p-award"><i class="fa-solid fa-trophy"></i><span>Best Barbershop 2024</span></div>
+  <div class="p-award"><i class="fa-solid fa-medal"></i><span>Top Rated on Google</span></div>
+  <div class="p-award"><i class="fa-solid fa-crown"></i><span>Editor's Choice — Urban Groom</span></div>
+  <div class="p-award"><i class="fa-solid fa-gem"></i><span>Luxury Service Award</span></div>
+</div>
+
+<!-- Testimonials -->
+<section class="p-reviews" id="reviews">
+  <div class="p-section-head">
+    <p class="p-eyebrow"><span></span>Client stories</p>
+    <h2>Reviews That <span class="accent-gold">Speak</span></h2>
+  </div>
+
+  <div class="p-review-track" id="reviewTrack">
+    <div class="p-review-card">
+      <div class="p-review-stars" data-stars="5"><i></i><i></i><i></i><i></i><i></i></div>
+      <p>"Best grooming experience in the city. The consultation alone is worth the visit — they actually study your face before touching a clipper."</p>
+      <div class="p-review-user"><img src="https://i.pravatar.cc/150?img=15" alt="Robert H." loading="lazy" /><div><strong>Robert H.</strong><span>Prestige Member <i class="fa-solid fa-circle-check"></i></span></div></div>
+    </div>
+    <div class="p-review-card">
+      <div class="p-review-stars" data-stars="5"><i></i><i></i><i></i><i></i><i></i></div>
+      <p>"The before/after slider on their site is exactly what you get in person. Genuinely transformative cuts, every time."</p>
+      <div class="p-review-user"><img src="https://i.pravatar.cc/150?img=32" alt="Michael S." loading="lazy" /><div><strong>Michael S.</strong><span>Elite Member <i class="fa-solid fa-circle-check"></i></span></div></div>
+    </div>
+    <div class="p-review-card">
+      <div class="p-review-stars" data-stars="4"><i></i><i></i><i></i><i></i><i></i></div>
+      <p>"Booked a same-day slot from the live availability widget — seamless, and the scalp therapy is now a monthly ritual."</p>
+      <div class="p-review-user"><img src="https://i.pravatar.cc/150?img=51" alt="Daniel K." loading="lazy" /><div><strong>Daniel K.</strong><span>Verified Client <i class="fa-solid fa-circle-check"></i></span></div></div>
+    </div>
+  </div>
+  <div class="p-review-dots" id="reviewDots"></div>
+</section>
+
+<!-- FAQ -->
+<section class="p-faq" id="faq">
+  <div class="p-section-head">
+    <p class="p-eyebrow"><span></span>Good to know</p>
+    <h2>Frequently Asked <span class="accent-gold">Questions</span></h2>
+  </div>
+
+  <div class="p-faq-list">
+    <div class="p-faq-item">
+      <button class="p-faq-q"><span>Do I need an appointment, or can I walk in?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="p-faq-a"><p>Walk-ins are welcome whenever a chair is free, but booking guarantees your slot — check the live availability widget above for today's openings.</p></div>
+    </div>
+    <div class="p-faq-item">
+      <button class="p-faq-q"><span>What's included in a Prestige membership?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="p-faq-a"><p>Two visits a month on any service, a complimentary hot towel shave, members' lounge access, and 20% off all retail products.</p></div>
+    </div>
+    <div class="p-faq-item">
+      <button class="p-faq-q"><span>Can I request a specific barber?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="p-faq-a"><p>Absolutely — select your preferred barber during checkout, or ask our front desk to match you with a specialist for your style.</p></div>
+    </div>
+    <div class="p-faq-item">
+      <button class="p-faq-q"><span>What's your cancellation policy?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="p-faq-a"><p>Free cancellation up to 4 hours before your appointment. Later changes may include a small courtesy fee for our barbers' time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking wizard -->
+<section class="p-book" id="book">
+  <div class="p-section-head">
+    <p class="p-eyebrow"><span></span>Reserve your chair</p>
+    <h2>Book In <span class="accent-gold">Three Steps</span></h2>
+  </div>
+
+  <div class="p-wizard">
+    <div class="p-wizard-progress">
+      <div class="p-wizard-bar"><span id="wizardBarFill"></span></div>
+      <div class="p-wizard-steps">
+        <div class="p-wstep active" data-wstep="1"><span>1</span>Service</div>
+        <div class="p-wstep" data-wstep="2"><span>2</span>Time</div>
+        <div class="p-wstep" data-wstep="3"><span>3</span>Confirm</div>
+      </div>
+    </div>
+
+    <form class="p-wizard-form" id="wizardForm" novalidate>
+      <!-- Step 1 -->
+      <div class="p-wpane active" data-wpane="1">
+        <p class="p-wpane-label">Choose a service</p>
+        <div class="p-chip-grid" id="serviceChips">
+          <button type="button" class="p-chip" data-value="Signature Haircut">Signature Haircut</button>
+          <button type="button" class="p-chip" data-value="Beard Sculpt">Beard Sculpt</button>
+          <button type="button" class="p-chip" data-value="Hot Towel Shave">Hot Towel Shave</button>
+          <button type="button" class="p-chip" data-value="Scalp Therapy">Scalp Therapy</button>
+          <button type="button" class="p-chip" data-value="Color Studio">Color Studio</button>
+          <button type="button" class="p-chip" data-value="Kids Cut">Kids Cut</button>
+        </div>
+        <div class="p-wpane-actions"><span></span><button type="button" class="p-btn p-btn-gold" data-wnext>Next <i class="fa-solid fa-arrow-right"></i></button></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="p-wpane" data-wpane="2">
+        <p class="p-wpane-label">Pick date &amp; time</p>
+        <div class="p-f2-row">
+          <div class="p-f2"><input type="date" id="wDate" /><label for="wDate">Date</label></div>
+          <div class="p-f2"><input type="time" id="wTime" /><label for="wTime">Time</label></div>
+        </div>
+        <div class="p-wpane-actions"><button type="button" class="p-btn p-btn-ghost" data-wback><i class="fa-solid fa-arrow-left"></i> Back</button><button type="button" class="p-btn p-btn-gold" data-wnext>Next <i class="fa-solid fa-arrow-right"></i></button></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="p-wpane" data-wpane="3">
+        <p class="p-wpane-label">Your details</p>
+        <div class="p-f2-row">
+          <div class="p-f2"><input type="text" id="wName" /><label for="wName">Full name</label></div>
+          <div class="p-f2"><input type="tel" id="wPhone" /><label for="wPhone">Phone</label></div>
+        </div>
+        <div class="p-wsummary" id="wSummary"></div>
+        <div class="p-wpane-actions"><button type="button" class="p-btn p-btn-ghost" data-wback><i class="fa-solid fa-arrow-left"></i> Back</button><button type="submit" class="p-btn p-btn-gold">Confirm Booking <i class="fa-solid fa-check"></i></button></div>
+      </div>
+
+      <!-- Success -->
+      <div class="p-wsuccess" id="wSuccess">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>You're all set!</h3>
+        <p id="wSuccessText">Confirmation is on its way.</p>
+        <button type="button" class="p-btn p-btn-ghost" id="wReset">Book Another Visit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="p-footer">
+  <div class="p-footer-top">
+    <div class="p-footer-brand">
+      <a href="#top" class="p-logo light"><svg width="28" height="28" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="26" stroke="#d9b96a" stroke-width="1.5"/><path d="M18 18 L42 42 M42 18 L30 30 M18 42 L25 35" stroke="#d9b96a" stroke-width="2" stroke-linecap="round"/></svg><span>Clipper S1 <em>Prestige</em></span></a>
+      <p>221B Baker Street, New York — an appointment-first suite for men who take their grooming seriously.</p>
+      <div class="p-hours-live" id="hoursLive"><span class="p-status-dot"></span><span id="hoursLiveText">Checking hours…</span></div>
+    </div>
+
+    <div class="p-footer-col">
+      <h4>Explore</h4>
+      <a href="#services">Services</a>
+      <a href="#membership">Membership</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="p-footer-col">
+      <h4>Newsletter</h4>
+      <p>Style notes and member-only offers, monthly.</p>
+      <form class="p-newsletter" id="newsletterForm">
+        <input type="email" placeholder="you@email.com" required />
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <span class="p-newsletter-msg" id="newsletterMsg"></span>
+    </div>
+  </div>
+
+  <div class="p-footer-bottom">
+    <p>&copy; <span id="pYear"></span> Clipper S1 Prestige Suite.</p>
+    <div class="p-footer-socials">
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Speed dial FAB (mobile) -->
+<div class="p-fab-wrap" id="fabWrap">
+  <div class="p-fab-menu" id="fabMenu">
+    <a href="tel:+15551234567" class="p-fab-item"><i class="fa-solid fa-phone"></i><span>Call</span></a>
+    <a href="https://wa.me/15551234567" class="p-fab-item" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+    <a href="#book" class="p-fab-item" id="fabBook"><i class="fa-solid fa-calendar-check"></i><span>Book</span></a>
+  </div>
+  <button class="p-fab-main" id="fabMain" aria-label="Quick actions" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+</div>
+
+<!-- Confetti layer -->
+<div class="p-confetti-layer" id="confettiLayer"></div>
+
+<!-- Cookie consent -->
+<div class="p-cookie" id="cookieBar">
+  <p><i class="fa-solid fa-cookie-bite"></i> We use cookies to make your visit smoother. By continuing, you agree to our use of cookies.</p>
+  <div class="p-cookie-actions">
+    <button class="p-btn p-btn-ghost p-btn-sm" id="cookieDecline">Decline</button>
+    <button class="p-btn p-btn-gold p-btn-sm" id="cookieAccept">Accept</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
