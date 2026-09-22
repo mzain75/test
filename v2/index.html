@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Clipper S1 — Studio Edition</title>
+<meta name="description" content="Clipper S1 Hair Saloon — Studio Edition. A bold, kinetic take on premium men's grooming." />
+<meta name="theme-color" content="#08080b" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <svg class="preload-mark" width="72" height="72" viewBox="0 0 72 72" fill="none">
+    <circle class="mark-ring" cx="36" cy="36" r="30" stroke="url(#g1)" stroke-width="2.5" />
+    <path class="mark-glyph" d="M22 22 L50 50 M50 22 L36 36 M22 50 L30 42" stroke="#d6ff3f" stroke-width="3" stroke-linecap="round" />
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="72" y2="72">
+        <stop offset="0%" stop-color="#d6ff3f" />
+        <stop offset="100%" stop-color="#8b5cf6" />
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Ambient blobs -->
+<div class="blob-field" aria-hidden="true">
+  <span class="blob blob-a"></span>
+  <span class="blob blob-b"></span>
+  <span class="blob blob-c"></span>
+</div>
+
+<!-- Version chip -->
+<a href="../index.html" class="version-chip">
+  <i class="fa-solid fa-arrow-left-long"></i> Classic Edition
+</a>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <svg width="34" height="34" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="30" stroke="#d6ff3f" stroke-width="2.5" />
+        <path d="M22 22 L50 50 M50 22 L36 36 M22 50 L30 42" stroke="#d6ff3f" stroke-width="3" stroke-linecap="round" />
+      </svg>
+      <span>Clipper<em>S1</em></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span>Menu</span>
+      <span class="menu-icon"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<!-- Fullscreen menu overlay -->
+<nav class="overlay-menu" id="overlayMenu">
+  <ul>
+    <li style="--i:0"><a href="#top" data-nav>Home</a></li>
+    <li style="--i:1"><a href="#story" data-nav>Story</a></li>
+    <li style="--i:2"><a href="#services" data-nav>Services</a></li>
+    <li style="--i:3"><a href="#gallery" data-nav>Gallery</a></li>
+    <li style="--i:4"><a href="#stats" data-nav>Stats</a></li>
+    <li style="--i:5"><a href="#pricing" data-nav>Pricing</a></li>
+    <li style="--i:6"><a href="#reviews" data-nav>Reviews</a></li>
+    <li style="--i:7"><a href="#book" data-nav>Book</a></li>
+  </ul>
+  <div class="overlay-footer">
+    <a href="tel:+15551234567"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a>
+    <div class="overlay-socials">
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-frame">
+    <img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=1600&q=80" alt="Sharp fade haircut" />
+  </div>
+
+  <div class="hero-copy">
+    <p class="tag-line"><span class="dot"></span>Studio Edition — New York</p>
+    <h1 class="kinetic-title" id="kineticTitle">
+      <span class="line" data-line>SHARP.</span>
+      <span class="line accent" data-line>BOLD.</span>
+      <span class="line" data-line>YOU.</span>
+    </h1>
+    <p class="hero-sub">Clipper S1's reinvented studio experience — precision barbering, immersive interiors, and a look that moves with you.</p>
+
+    <div class="hero-cta-row">
+      <a href="#book" class="magnetic-btn" data-magnetic>
+        <span>Reserve a Chair</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="#story" class="ghost-link">
+        <span class="play-ring"><i class="fa-solid fa-chevron-down"></i></span>
+        Discover the studio
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-chip hero-chip-a">
+    <strong>4.9</strong>
+    <span>★★★★★ 900+ reviews</span>
+  </div>
+  <div class="hero-chip hero-chip-b">
+    <i class="fa-solid fa-calendar-check"></i>
+    <span>Same-day slots open</span>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee2">
+  <div class="marquee2-track">
+    <span>PRECISION FADES</span><span>／</span><span>BEARD DESIGN</span><span>／</span><span>SCALP THERAPY</span><span>／</span><span>COLOR STUDIO</span><span>／</span><span>KIDS CORNER</span><span>／</span><span>PRECISION FADES</span><span>／</span><span>BEARD DESIGN</span><span>／</span><span>SCALP THERAPY</span><span>／</span><span>COLOR STUDIO</span><span>／</span><span>KIDS CORNER</span><span>／</span>
+  </div>
+</div>
+
+<!-- Story: pinned scrollytelling -->
+<section class="story" id="story">
+  <div class="story-media">
+    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80" alt="Clipper S1 studio interior" id="storyImg" />
+    <div class="story-media-veil"></div>
+  </div>
+
+  <div class="story-steps">
+    <div class="story-step" data-step="0">
+      <span class="step-index">01</span>
+      <h2>A Studio, Not a Shop</h2>
+      <p>Clipper S1 was built to feel like a design studio — clean lines, warm light, and chairs that face the city instead of a mirror wall.</p>
+    </div>
+    <div class="story-step" data-step="1">
+      <span class="step-index">02</span>
+      <h2>Barbers Who Listen First</h2>
+      <p>Every visit opens with a 5-minute consult. We map your face, hair type and routine before a single clipper turns on.</p>
+    </div>
+    <div class="story-step" data-step="2">
+      <span class="step-index">03</span>
+      <h2>Products We'd Use Ourselves</h2>
+      <p>Small-batch pomades, cold-pressed oils and imported steel — nothing sits on our shelf that our own barbers wouldn't use.</p>
+    </div>
+    <div class="story-step" data-step="3">
+      <span class="step-index">04</span>
+      <h2>A Finish That Travels</h2>
+      <p>We style for how you'll actually wear it — through a workout, a flight, a Tuesday. Not just for the walk to the mirror.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services: bento grid -->
+<section class="services2" id="services">
+  <div class="section-head2">
+    <p class="eyebrow2"><span class="dot"></span>What we do</p>
+    <h2>Services, <span class="accent-text">reimagined.</span></h2>
+  </div>
+
+  <div class="bento">
+    <a href="#book" class="bento-card bento-lg tilt" data-tilt>
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80" alt="Signature haircut" />
+      <div class="bento-info">
+        <h3>Signature Cut</h3>
+        <p>Scissor + clipper precision, tailored to face shape</p>
+        <span class="bento-price">$35</span>
+      </div>
+    </a>
+
+    <a href="#book" class="bento-card tilt" data-tilt>
+      <div class="bento-icon"><i class="fa-solid fa-user-ninja"></i></div>
+      <h3>Beard Design</h3>
+      <p>Sharp lineups, hot towel finish</p>
+      <span class="bento-price">$20</span>
+    </a>
+
+    <a href="#book" class="bento-card tilt" data-tilt>
+      <div class="bento-icon"><i class="fa-solid fa-droplet"></i></div>
+      <h3>Razor Shave</h3>
+      <p>Traditional straight-razor ritual</p>
+      <span class="bento-price">$32</span>
+    </a>
+
+    <a href="#book" class="bento-card bento-wide tilt" data-tilt>
+      <div class="bento-icon"><i class="fa-solid fa-spa"></i></div>
+      <div>
+        <h3>Scalp Therapy</h3>
+        <p>Deep-condition treatment with pressure-point massage — 45 min of pure reset.</p>
+      </div>
+      <span class="bento-price">$40</span>
+    </a>
+
+    <a href="#book" class="bento-card tilt" data-tilt>
+      <div class="bento-icon"><i class="fa-solid fa-palette"></i></div>
+      <h3>Color Studio</h3>
+      <p>Grey coverage to bold tones</p>
+      <span class="bento-price">$50</span>
+    </a>
+
+    <a href="#book" class="bento-card tilt" data-tilt>
+      <div class="bento-icon"><i class="fa-solid fa-child-reaching"></i></div>
+      <h3>Kids Corner</h3>
+      <p>Patient cuts, under 12</p>
+      <span class="bento-price">$18</span>
+    </a>
+  </div>
+</section>
+
+<!-- Gallery: horizontal snap -->
+<section class="gallery2" id="gallery">
+  <div class="section-head2">
+    <p class="eyebrow2"><span class="dot"></span>Fresh looks</p>
+    <h2>Swipe the <span class="accent-text">lookbook.</span></h2>
+  </div>
+
+  <div class="hscroll" id="hscroll">
+    <div class="hscroll-track">
+      <figure class="hcard"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=80" alt="Barber styling client" loading="lazy" /></figure>
+      <figure class="hcard"><img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80" alt="Fresh haircut" loading="lazy" /></figure>
+      <figure class="hcard"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=900&q=80" alt="Hot towel shave" loading="lazy" /></figure>
+      <figure class="hcard"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=900&q=80" alt="Barbershop chairs" loading="lazy" /></figure>
+      <figure class="hcard"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=80" alt="Barber tools" loading="lazy" /></figure>
+      <figure class="hcard end-card">
+        <div>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span>See full gallery</span>
+        </div>
+      </figure>
+    </div>
+  </div>
+  <p class="swipe-hint"><i class="fa-solid fa-hand-pointer"></i> Swipe to explore</p>
+</section>
+
+<!-- Stats: rings -->
+<section class="stats2" id="stats">
+  <div class="stats2-grid">
+    <div class="ring-stat reveal2" data-value="97">
+      <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" cx="60" cy="60" r="52"/></svg>
+      <div class="ring-label"><strong><span class="count">0</span>%</strong><span>Client return rate</span></div>
+    </div>
+    <div class="ring-stat reveal2" data-value="9">
+      <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" cx="60" cy="60" r="52"/></svg>
+      <div class="ring-label"><strong><span class="count">0</span>+</strong><span>Years crafting cuts</span></div>
+    </div>
+    <div class="ring-stat reveal2" data-value="88">
+      <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" cx="60" cy="60" r="52"/></svg>
+      <div class="ring-label"><strong><span class="count">0</span>%</strong><span>Book again in 30 days</span></div>
+    </div>
+    <div class="ring-stat reveal2" data-value="12">
+      <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" cx="60" cy="60" r="52"/></svg>
+      <div class="ring-label"><strong><span class="count">0</span></strong><span>Master barbers on deck</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing2" id="pricing">
+  <div class="section-head2">
+    <p class="eyebrow2"><span class="dot"></span>Membership</p>
+    <h2>Pick your <span class="accent-text">rhythm.</span></h2>
+  </div>
+
+  <div class="flip-grid">
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="flip-tag">Drop-in</span>
+          <div class="flip-price">$35</div>
+          <p>Single signature cut, no commitment</p>
+          <span class="flip-cue">Tap for details <i class="fa-solid fa-rotate"></i></span>
+        </div>
+        <div class="flip-back">
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Signature haircut</li>
+            <li><i class="fa-solid fa-check"></i> Hot towel finish</li>
+            <li><i class="fa-solid fa-check"></i> Style consult</li>
+          </ul>
+          <a href="#book" class="btn2 btn2-outline">Book This</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card featured2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="flip-tag">Most booked</span>
+          <div class="flip-price">$89<small>/mo</small></div>
+          <p>Two visits monthly + member perks</p>
+          <span class="flip-cue">Tap for details <i class="fa-solid fa-rotate"></i></span>
+        </div>
+        <div class="flip-back">
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 2 signature cuts / month</li>
+            <li><i class="fa-solid fa-check"></i> Free beard touch-ups</li>
+            <li><i class="fa-solid fa-check"></i> 15% off products</li>
+            <li><i class="fa-solid fa-check"></i> Priority booking</li>
+          </ul>
+          <a href="#book" class="btn2 btn2-solid">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="flip-tag">Studio VIP</span>
+          <div class="flip-price">$149<small>/mo</small></div>
+          <p>Unlimited visits, full-service reset</p>
+          <span class="flip-cue">Tap for details <i class="fa-solid fa-rotate"></i></span>
+        </div>
+        <div class="flip-back">
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Unlimited signature cuts</li>
+            <li><i class="fa-solid fa-check"></i> Monthly scalp therapy</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated barber</li>
+            <li><i class="fa-solid fa-check"></i> Guest passes x2</li>
+          </ul>
+          <a href="#book" class="btn2 btn2-outline">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials: dual marquee -->
+<section class="reviews2" id="reviews">
+  <div class="section-head2 light2">
+    <p class="eyebrow2"><span class="dot"></span>Word on the street</p>
+    <h2>Clients keep <span class="accent-text">coming back.</span></h2>
+  </div>
+
+  <div class="marquee-row" data-dir="left">
+    <div class="marquee-row-track">
+      <div class="rcard"><p>"The bento-style menu on their site is exactly how the studio feels — fast, sharp, zero fuss."</p><span>— James C.</span></div>
+      <div class="rcard"><p>"Hot towel shave here is a religious experience. I plan my week around it."</p><span>— Ethan B.</span></div>
+      <div class="rcard"><p>"Booked same-day on a Saturday. Cut was flawless. New regular here."</p><span>— Noah B.</span></div>
+      <div class="rcard"><p>"They actually listen before cutting. Wild concept, incredible result."</p><span>— Liam O.</span></div>
+      <div class="rcard"><p>"The bento-style menu on their site is exactly how the studio feels — fast, sharp, zero fuss."</p><span>— James C.</span></div>
+      <div class="rcard"><p>"Hot towel shave here is a religious experience. I plan my week around it."</p><span>— Ethan B.</span></div>
+    </div>
+  </div>
+  <div class="marquee-row" data-dir="right">
+    <div class="marquee-row-track">
+      <div class="rcard"><p>"Scalp therapy fixed my dry-scalp problem in two sessions. Didn't expect that."</p><span>— Marcus T.</span></div>
+      <div class="rcard"><p>"VIP membership pays for itself. My barber knows my order before I sit down."</p><span>— Aiden W.</span></div>
+      <div class="rcard"><p>"Studio vibe is unmatched — feels like a design agency that also cuts hair."</p><span>— Ryan K.</span></div>
+      <div class="rcard"><p>"Took my son here, they made his first haircut fun instead of scary."</p><span>— David P.</span></div>
+      <div class="rcard"><p>"Scalp therapy fixed my dry-scalp problem in two sessions. Didn't expect that."</p><span>— Marcus T.</span></div>
+      <div class="rcard"><p>"VIP membership pays for itself. My barber knows my order before I sit down."</p><span>— Aiden W.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking -->
+<section class="book2" id="book">
+  <div class="book2-inner">
+    <div class="book2-copy">
+      <p class="eyebrow2"><span class="dot"></span>Reserve</p>
+      <h2>Let's get you <span class="accent-text">in the chair.</span></h2>
+      <p class="book2-sub">Pick a service and time — confirmation lands in your inbox within minutes.</p>
+
+      <div class="steps-mini">
+        <div class="step-mini active" data-step-mini="1"><span>1</span>Service</div>
+        <div class="step-mini" data-step-mini="2"><span>2</span>Time</div>
+        <div class="step-mini" data-step-mini="3"><span>3</span>Confirm</div>
+      </div>
+    </div>
+
+    <form class="book2-form" id="bookingForm2" novalidate>
+      <div class="form2-success" id="formSuccess2">
+        <i class="fa-solid fa-champagne-glasses"></i>
+        <h3>You're booked!</h3>
+        <p>Confirmation text is on its way.</p>
+      </div>
+
+      <div class="form2-fields" id="formFields2">
+        <div class="f2-row">
+          <div class="f2">
+            <input type="text" id="n2" placeholder=" " required />
+            <label for="n2">Full name</label>
+          </div>
+          <div class="f2">
+            <input type="tel" id="p2" placeholder=" " required />
+            <label for="p2">Phone</label>
+          </div>
+        </div>
+        <div class="f2">
+          <select id="s2" required>
+            <option value="" disabled selected hidden></option>
+            <option>Signature Cut</option>
+            <option>Beard Design</option>
+            <option>Razor Shave</option>
+            <option>Scalp Therapy</option>
+            <option>Color Studio</option>
+            <option>Kids Corner</option>
+          </select>
+          <label for="s2">Service</label>
+        </div>
+        <div class="f2-row">
+          <div class="f2">
+            <input type="date" id="d2" required />
+            <label for="d2">Date</label>
+          </div>
+          <div class="f2">
+            <input type="time" id="t2" required />
+            <label for="t2">Time</label>
+          </div>
+        </div>
+        <button type="submit" class="magnetic-btn full" data-magnetic>
+          <span>Confirm Reservation</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Big CTA footer -->
+<footer class="footer2">
+  <div class="footer2-cta">
+    <h2>Ready to <span class="accent-text">level up</span> your look?</h2>
+    <a href="#book" class="magnetic-btn xl" data-magnetic>
+      <span>Book Your Slot</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <div class="footer2-bottom">
+    <a href="#top" class="logo light">
+      <svg width="28" height="28" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="30" stroke="#d6ff3f" stroke-width="2.5" />
+        <path d="M22 22 L50 50 M50 22 L36 36 M22 50 L30 42" stroke="#d6ff3f" stroke-width="3" stroke-linecap="round" />
+      </svg>
+      <span>Clipper<em>S1</em></span>
+    </a>
+    <div class="footer2-socials">
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; <span id="year2"></span> Clipper S1 Studio Edition.</p>
+  </div>
+</footer>
+
+<!-- Sticky mobile CTA bar -->
+<div class="mobile-cta" id="mobileCta">
+  <a href="tel:+15551234567" class="mobile-cta-btn ghost"><i class="fa-solid fa-phone"></i></a>
+  <a href="#book" class="mobile-cta-btn solid"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+</div>
+
+<div class="cursor-ring" id="cursorRing"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
